@@ -1,0 +1,7 @@
+<div class="container">
+  <mat-card *ngIf ="passedShow.name">
+    <mat-card-title>{{passedShow.name}}</mat-card-title>
+    <mat-card-subtitle>Premiered: {{passedShow.premiered | date}}</mat-card-subtitle>
+    <mat-card-subtitle>Status: {{passedShow.status}}</mat-card-subtitle>
+  </mat-card>
+</div>

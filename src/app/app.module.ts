@@ -18,7 +18,7 @@ import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ShowDetailComponent } from './shows/show-detail/show-detail.component';
 import {HttpClientModule} from '@angular/common/http';
-import { NavbarComponent } from './navbar/navbar.component';
+
 
 @NgModule({
   declarations: [
@@ -26,8 +26,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     ShowsComponent,
     SubmittedDirective,
     UnsubmittedDirective,
-    ShowDetailComponent,
-    NavbarComponent
+    ShowDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,22 @@
-<div class="container">
-  <mat-card *ngIf ="passedShow.name">
-    <mat-card-title>{{passedShow.name}}</mat-card-title>
-    <mat-card-subtitle>Premiered: {{passedShow.premiered | date}}</mat-card-subtitle>
-    <mat-card-subtitle>Status: {{passedShow.status}}</mat-card-subtitle>
-  </mat-card>
-</div>
+<button mat-stroked-button
+        routerLink=""
+        color="primary">Search By Show</button>
+<mat-list>
+<mat-list-item *ngFor="let show of shows" [ngStyle]="{'color':show.show.status === false ? 'red':'green'}">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6">
+                {{show.show.name}}
+              </div>
+            <div class="col-lg-3">
+               Premiered : {{show.show.premiered | date}}
+            </div>
+            <div class="col-lg-3">
+              Status: {{show.show.status}}
+            </div>
+
+          </div>
+            <mat-divider></mat-divider>
+        </div>
+ </mat-list-item>
+</mat-list>

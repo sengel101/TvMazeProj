@@ -1,36 +1,18 @@
 <div class="container">
+    <h1 class="mat-display-1">TV Maze</h1>
     <form ngForm #showsForm>
       <div class="row">
         <mat-form-field>
           <input matInput [(ngModel)]="name" name="show" placeholder="Show">
         </mat-form-field>
       </div>
-
       <button mat-stroked-button
-              (click) = "searchShows()"
+              routerLink="shows/{{name}}"
               color="primary">Submit</button>
     </form>
 </div>
-    <mat-list *ngFor="let show of shows" [ngStyle]="{'color':show.status === false ? 'red':'green'}">
-      <mat-list-item>
-        <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            {{show.name}}
-          </div>
-          <div class="col-lg-4">
-            Premiered : {{show.premiered | date}}
-          </div>
-          <div class="col-lg-4">
-            Status: {{show.status}}
-          </div>
-        </div>
-        </div>
-        <ng-template #unsubmitted>{{show.name}} has not submitted</ng-template>
-        <mat-divider></mat-divider>
-      </mat-list-item>
-    </mat-list>>
-<app-show-detail [passedShow]="selectedShow"></app-show-detail>
+
+<!--<app-show-detail [passedShow]="selectedShow"></app-show-detail>-->
 <!--<div *ngFor="let assignment of assignments">-->
   <!--<p appSubmitted *ngIf="assignment.status; else unsubmitted">{{assignment.name}} has submitted </p>-->
   <!--<ng-template #unsubmitted><p appUnsubmitted>{{assignment.name}} has not submitted</p></ng-template>-->

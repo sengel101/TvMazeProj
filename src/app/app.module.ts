@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import {
   MatButtonModule,
   MatCardModule, MatCheckboxModule,
-  MatDatepickerModule,
+  MatDatepickerModule, MatExpansionModule,
   MatFormFieldModule,
   MatInputModule, MatListModule,
   MatNativeDateModule
@@ -42,7 +42,9 @@ import {HttpClientModule} from '@angular/common/http';
     MatListModule,
     MatCardModule,
     MatCheckboxModule,
-    HttpClientModule
+    HttpClientModule,
+    MatExpansionModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

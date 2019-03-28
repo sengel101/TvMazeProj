@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 import {
   MatButtonModule,
   MatCardModule, MatCheckboxModule,
-  MatDatepickerModule, MatExpansionModule,
-  MatFormFieldModule,
+  MatDatepickerModule,
+  MatFormFieldModule, MatIconModule,
   MatInputModule, MatListModule,
   MatNativeDateModule
 } from '@angular/material';
@@ -18,6 +18,9 @@ import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ShowDetailComponent } from './shows/show-detail/show-detail.component';
 import {HttpClientModule} from '@angular/common/http';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { SeasonsComponent } from './seasons/seasons.component';
+import { EpisodesComponent } from './episodes/episodes.component';
 
 
 @NgModule({
@@ -26,7 +29,9 @@ import {HttpClientModule} from '@angular/common/http';
     ShowsComponent,
     SubmittedDirective,
     UnsubmittedDirective,
-    ShowDetailComponent
+    ShowDetailComponent,
+    SeasonsComponent,
+    EpisodesComponent,
   ],
   imports: [
     BrowserModule,

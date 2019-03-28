@@ -1,22 +1,29 @@
 <button mat-stroked-button
         routerLink=""
         color="primary">Search By Show</button>
-<mat-list>
-<mat-list-item *ngFor="let show of shows" [ngStyle]="{'color':show.show.status === false ? 'red':'green'}">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-6">
-                {{show.show.name}}
-              </div>
-            <div class="col-lg-3">
-               Premiered : {{show.show.premiered | date}}
-            </div>
-            <div class="col-lg-3">
-              Status: {{show.show.status}}
-            </div>
 
-          </div>
-            <mat-divider></mat-divider>
-        </div>
- </mat-list-item>
-</mat-list>
+
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let show of shows" [ngStyle]="{'color':show.show.status === false ? 'red':'blue'}">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+         {{show.show.name}}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{show.show.premiered | date}}
+      </mat-panel-description>
+      <mat-panel-description>
+        {{show.show.status}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-action-row>
+      <button mat-raised-button color="accent"
+              routerLink="/show/{{show.show.id}}"
+              color="primary">Details</button>
+    </mat-action-row>
+    <mat-panel-description>
+      <img style="float: left; margin-right:1.5rem" *ngIf="show.show.image" src="{{show.show.image.medium}}">
+      <span [ngStyle]="{'color':'blue'}" [innerHTML]="show.show.summary"></span>
+    </mat-panel-description>
+  </mat-expansion-panel>
+</mat-accordion>

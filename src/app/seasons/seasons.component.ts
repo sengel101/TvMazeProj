@@ -1,22 +1,20 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {ServiceService} from '../../models/service.service';
-import { Show } from '../show.model';
+import {ServiceService} from '../models/service.service';
 import { HttpClient} from '@angular/common/http';
 
 @Component({
-  selector: 'app-show-detail',
-  templateUrl: './show-detail.component.html',
-  styleUrls: ['./show-detail.component.scss']
+  selector: 'app-seasons',
+  templateUrl: './seasons.component.html',
+  styleUrls: ['./seasons.component.sass']
 })
-export class ShowDetailComponent implements OnInit {
-  shows: any;
+export class SeasonsComponent implements OnInit {
+  seasons: any;
   constructor(private service: ServiceService, private router: Router, private route: ActivatedRoute) {
-
-    this.service.getShows(
-      this.route.snapshot.paramMap.get('query')
+    this.service.getSeasons(
+      this.route.snapshot.paramMap.get('id')
     ).subscribe(
-      result => this.shows = result
+      result => this.seasons = result
     );
   }
   ngOnInit() {
@@ -27,3 +25,4 @@ export class ShowDetailComponent implements OnInit {
     this.router.navigate(['episodes', show.show.id]);
   }
 }
+

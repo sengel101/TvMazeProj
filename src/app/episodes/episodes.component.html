@@ -1,0 +1,24 @@
+  <div class = "row">
+    <div class="col-lg-4">
+      <b>Number</b>
+    </div>
+    <div class="col-lg-4">
+      <b>Name</b>
+    </div>
+    <div class="col-lg-4">
+      <b>Airdate</b>
+    </div>
+  </div>
+  <mat-expansion-panel *ngFor="let episode of episodes" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{episode.number}}
+      </mat-panel-title>
+      <mat-panel-title>
+        {{episode.name}}
+      </mat-panel-title>
+      <mat-panel-title>
+        {{episode.airdate}}
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>

@@ -1,8 +1,9 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {ServiceService} from '../../models/service.service';
-import { Show } from '../../models/show.model';
 import { HttpClient} from '@angular/common/http';
+
+// Load the <shows> array by calling service.getShows() passing the <query> named param of the Active Route
 
 @Component({
   selector: 'app-show-detail',
@@ -23,7 +24,6 @@ export class ShowDetailComponent implements OnInit {
 
   }
 
-  goToEpisodes(show) {
-    this.router.navigate(['episodes', show.show.id]);
-  }
+
+
 }

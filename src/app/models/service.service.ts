@@ -8,7 +8,7 @@ import {HttpClient} from '@angular/common/http';
 export class ServiceService {
 
 
-
+// API Calls for the : (1) Shows By Search   (2) Seasons By ShowId  (3) Episodes By Show Season
 
   constructor(private http: HttpClient) { }
 

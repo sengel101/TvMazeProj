@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {ServiceService} from '../models/service.service';
+import {ServiceService} from '../../models/service.service';
 import {Router} from '@angular/router';
-import { Show } from '../models/show.model';
 import { HttpClient } from '@angular/common/http';
 
+// Capture search input into variable <query> and load <show-detail> view
 
 @Component({
   selector: 'app-shows',
@@ -11,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./shows.component.scss']
 })
 export class ShowsComponent implements OnInit {
-  name: string;
+  query: string;
   constructor() {
   }
 

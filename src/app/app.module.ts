@@ -11,24 +11,20 @@ import {
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ShowsComponent } from './shows/shows.component';
-import { SubmittedDirective } from './shared/submitted.directive';
-import { UnsubmittedDirective } from './shared/unsubmitted.directive';
+import { ShowsComponent } from './views/shows/shows.component';
 import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { ShowDetailComponent } from './shows/show-detail/show-detail.component';
+import { ShowDetailComponent } from './views/show-detail/show-detail.component';
 import {HttpClientModule} from '@angular/common/http';
 import {MatExpansionModule} from '@angular/material/expansion';
-import { SeasonsComponent } from './seasons/seasons.component';
-import { EpisodesComponent } from './episodes/episodes.component';
+import { SeasonsComponent } from './views/seasons/seasons.component';
+import { EpisodesComponent } from './views/episodes/episodes.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ShowsComponent,
-    SubmittedDirective,
-    UnsubmittedDirective,
     ShowDetailComponent,
     SeasonsComponent,
     EpisodesComponent,

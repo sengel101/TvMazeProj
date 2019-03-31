@@ -1,6 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {ServiceService} from '../models/service.service';
+import {ServiceService} from '../../models/service.service';
 import {ActivatedRoute, Router} from '@angular/router';
+
+// Load the <episodes> array by calling service.getEpisodes() by passing the saeson <id> from the Parent using ng-Model
 
 @Component({
   selector: 'app-episodes',

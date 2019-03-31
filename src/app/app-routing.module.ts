@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {ShowDetailComponent} from './shows/show-detail/show-detail.component';
-import {ShowsComponent} from './shows/shows.component';
-import {SeasonsComponent} from './seasons/seasons.component';
+import {ShowDetailComponent} from './views/show-detail/show-detail.component';
+import {ShowsComponent} from './views/shows/shows.component';
+import {SeasonsComponent} from './views/seasons/seasons.component';
 
 
 

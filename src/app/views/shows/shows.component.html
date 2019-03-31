@@ -1,13 +1,13 @@
 <div>
     <h2 class="mat-display-1">TV Maze APP</h2>
-    <form ngForm #showsForm>
+    <form ngForm>
       <div class="row">
         <mat-form-field>
-          <input matInput [(ngModel)]="name" name="show" placeholder="Show">
+          <input matInput [(ngModel)]="query" name="show" placeholder="Show">
         </mat-form-field>
       </div>
       <button mat-fab
-              routerLink="shows/{{name}}"
+              routerLink="shows/{{query}}"
               color="primary">Search</button>
     </form>
 </div>

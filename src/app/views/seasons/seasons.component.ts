@@ -1,7 +1,9 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {ServiceService} from '../models/service.service';
+import {ServiceService} from '../../models/service.service';
 import { HttpClient} from '@angular/common/http';
+
+// Load the <seasons> array by calling service.getSeasons() passing the show <id> named param of the Active Route
 
 @Component({
   selector: 'app-seasons',

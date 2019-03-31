@@ -1,19 +1,14 @@
-<div class="container">
-    <h1 class="mat-display-1">TV Maze</h1>
+<div>
+    <h2 class="mat-display-1">TV Maze APP</h2>
     <form ngForm #showsForm>
       <div class="row">
         <mat-form-field>
           <input matInput [(ngModel)]="name" name="show" placeholder="Show">
         </mat-form-field>
       </div>
-      <button mat-stroked-button
+      <button mat-fab
               routerLink="shows/{{name}}"
-              color="primary">Submit</button>
+              color="primary">Search</button>
     </form>
 </div>
 
-<!--<app-show-detail [passedShow]="selectedShow"></app-show-detail>-->
-<!--<div *ngFor="let assignment of assignments">-->
-  <!--<p appSubmitted *ngIf="assignment.status; else unsubmitted">{{assignment.name}} has submitted </p>-->
-  <!--<ng-template #unsubmitted><p appUnsubmitted>{{assignment.name}} has not submitted</p></ng-template>-->
-<!--</div>-->

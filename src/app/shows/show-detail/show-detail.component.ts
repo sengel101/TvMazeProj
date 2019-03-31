@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {ServiceService} from '../../models/service.service';
-import { Show } from '../show.model';
+import { Show } from '../../models/show.model';
 import { HttpClient} from '@angular/common/http';
 
 @Component({

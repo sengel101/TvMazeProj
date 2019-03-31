@@ -6,7 +6,7 @@ import { HttpClient} from '@angular/common/http';
 @Component({
   selector: 'app-seasons',
   templateUrl: './seasons.component.html',
-  styleUrls: ['./seasons.component.sass']
+  styleUrls: ['./seasons.component.scss']
 })
 export class SeasonsComponent implements OnInit {
   seasons: any;

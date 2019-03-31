@@ -8,9 +8,6 @@
         Season : {{season.number}}
       </mat-panel-title>
     </mat-expansion-panel-header>
-    <!--<mat-action-row>-->
-      <!--<button mat-raised-button color="accent" routerLink="'episodes/' + season.id">Episodes</button>-->
-    <!--</mat-action-row>-->
     <mat-panel-description>
       <img style="float: left; margin-right:1.5rem" *ngIf="season.image" src="{{season.image.medium}}">
       <ng-template matExpansionPanelContent>
@@ -22,3 +19,4 @@
     </mat-panel-description>
   </mat-expansion-panel>
 </mat-accordion>
+

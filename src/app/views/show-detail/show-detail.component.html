@@ -1,3 +1,6 @@
+<!--Loads the shows data and provides a Detail button to launch the SeasonsComponent using the routerLink-->
+<!--Will also launch the SingleEpisodeComponent via the <app-single-episode> selector when applicable to get the Previous/Next episode name-->
+
 <button mat-stroked-button
         routerLink=""
         color="primary">Search By Show</button>
@@ -10,10 +13,10 @@
          {{show.show.name}}
       </mat-panel-title>
       <mat-panel-description>
-        {{show.show.premiered | date}}
+        <i>Premiered : </i> <b>{{show.show.premiered | date}}</b>
       </mat-panel-description>
       <mat-panel-description>
-        {{show.show.status}}
+        <i>Status : </i><b>{{show.show.status}}</b>
       </mat-panel-description>
     </mat-expansion-panel-header>
     <mat-action-row>
@@ -22,8 +25,13 @@
               color="primary">Details</button>
     </mat-action-row>
     <mat-panel-description>
-      <img style="float: left; margin-right:1.5rem" *ngIf="show.show.image" src="{{show.show.image.medium}}">
-      <span [ngStyle]="{'color':'blue'}" [innerHTML]="show.show.summary"></span>
+      <img style="float: left; margin-right:1.5rem" *ngIf="show.show.image" [src]="show.show.image.medium">
+      <span style="float:left" [ngStyle]="{'color':'blue'}" [innerHTML]="show.show.summary"></span>
+      <ng-template matExpansionPanelContent>
+        <br>
+        <p *ngIf="show.show._links.previousepisode">Previous episode: <app-single-episode [url]="show.show._links.previousepisode.href"></app-single-episode></p>
+        <p *ngIf="show.show._links.nextepisode">Next episode: <app-single-episode [url]="show.show._links.nextepisode.href"></app-single-episode></p>
+      </ng-template>
     </mat-panel-description>
   </mat-expansion-panel>
 </mat-accordion>

@@ -8,7 +8,7 @@ import {HttpClient} from '@angular/common/http';
 export class ServiceService {
 
 
-// API Calls for the : (1) Shows By Search   (2) Seasons By ShowId  (3) Episodes By Show Season
+// API Calls for the : (1) Shows By SearchName   (2) Seasons By ShowId  (3) Episodes By Show Season  (4) Single Episode
 
   constructor(private http: HttpClient) { }
 
@@ -20,6 +20,9 @@ export class ServiceService {
   }
   getEpisodes(u) {
     return this.http.get('http://api.tvmaze.com/seasons/' + u + '/episodes');
+  }
+  getSingleEpisode(url) {
+    return this.http.get(url);
   }
 }
 

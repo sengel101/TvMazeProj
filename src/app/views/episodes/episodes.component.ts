@@ -7,7 +7,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 @Component({
   selector: 'app-episodes',
   templateUrl: './episodes.component.html',
-  styleUrls: ['./episodes.component.sass']
+  styleUrls: ['./episodes.component.scss']
 })
 export class EpisodesComponent implements OnInit {
   episodes: any;
@@ -23,7 +23,4 @@ export class EpisodesComponent implements OnInit {
       );
   }
 
-  goToEpisodes(show) {
-    this.router.navigate(['episodes', show.show.id]);
-  }
 }

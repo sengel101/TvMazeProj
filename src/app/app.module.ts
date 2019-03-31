@@ -19,6 +19,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { SeasonsComponent } from './views/seasons/seasons.component';
 import { EpisodesComponent } from './views/episodes/episodes.component';
+import { SingleEpisodeComponent } from './views/single-episode/single-episode.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { EpisodesComponent } from './views/episodes/episodes.component';
     ShowDetailComponent,
     SeasonsComponent,
     EpisodesComponent,
+    SingleEpisodeComponent
   ],
   imports: [
     BrowserModule,

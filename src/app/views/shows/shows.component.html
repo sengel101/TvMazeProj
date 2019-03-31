@@ -1,9 +1,10 @@
+<!--Search input/button to launch the ShowDetail component using the routerLink -->
 <div>
     <h2 class="mat-display-1">TV Maze APP</h2>
     <form ngForm>
       <div class="row">
         <mat-form-field>
-          <input matInput [(ngModel)]="query" name="show" placeholder="Show">
+          <input matInput [(ngModel)]="query" name="show" placeholder="Show" autofocus>
         </mat-form-field>
       </div>
       <button mat-fab

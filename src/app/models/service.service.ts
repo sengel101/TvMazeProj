@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
 
 
 @Injectable({
@@ -10,19 +11,20 @@ export class ServiceService {
 
 // API Calls for the : (1) Shows By SearchName   (2) Seasons By ShowId  (3) Episodes By Show Season  (4) Single Episode
 
+  baseURL = 'http://api.tvmaze.com/';
   constructor(private http: HttpClient) { }
 
-  getShows(u) {
-    return this.http.get('http://api.tvmaze.com/search/shows?q=' + u);
+  getShows(query): Observable<any[]> {
+    return this.http.get<any[]>(this.baseURL + 'search/shows?q=' + query);
   }
-  getSeasons(u) {
-    return this.http.get('http://api.tvmaze.com/shows/' + u + '/seasons');
+  getSeasons(id): Observable<any[]> {
+    return this.http.get<any[]>(this.baseURL + 'shows/' + id + '/seasons');
   }
-  getEpisodes(u) {
-    return this.http.get('http://api.tvmaze.com/seasons/' + u + '/episodes');
+  getEpisodes(id): Observable<any[]> {
+    return this.http.get<any[]>(this.baseURL + 'seasons/' + id + '/episodes');
   }
-  getSingleEpisode(url) {
-    return this.http.get(url);
+  getSingleEpisode(url): Observable<any[]> {
+    return this.http.get<any[]>(url);
   }
 }
 

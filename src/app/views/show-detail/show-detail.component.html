@@ -7,30 +7,30 @@
 
 
 <mat-accordion>
-  <mat-expansion-panel *ngFor="let show of shows" [ngStyle]="{'color':show.show.status === false ? 'red':'blue'}">
+  <mat-expansion-panel *ngFor="let show of shows" [ngStyle]="{'color':show.status === false ? 'red':'blue'}">
     <mat-expansion-panel-header>
-      <mat-panel-title *ngIf="show.show.name">
-         {{show.show.name}}
+      <mat-panel-title *ngIf="show.name">
+         {{show.name}}
       </mat-panel-title>
       <mat-panel-description>
-        <i>Premiered : </i> <b>{{show.show.premiered | date}}</b>
+        <i>Premiered : </i> <b>{{show.premiered | date}}</b>
       </mat-panel-description>
       <mat-panel-description>
-        <i>Status : </i><b>{{show.show.status}}</b>
+        <i>Status : </i><b>{{show.status}}</b>
       </mat-panel-description>
     </mat-expansion-panel-header>
     <mat-action-row>
       <button mat-raised-button color="accent"
-              routerLink="/show/{{show.show.id}}"
+              routerLink="/show/{{show.id}}"
               color="primary">Details</button>
     </mat-action-row>
     <mat-panel-description>
-      <img style="float: left; margin-right:1.5rem" *ngIf="show.show.image" [src]="show.show.image.medium">
-      <span style="float:left" [ngStyle]="{'color':'blue'}" [innerHTML]="show.show.summary"></span>
+      <img style="float: left; margin-right:1.5rem" *ngIf="show.image" [src]="show.image">
+      <span style="float:left" [ngStyle]="{'color':'blue'}" [innerHTML]="show.summary"></span>
       <ng-template matExpansionPanelContent>
         <br>
-        <p *ngIf="show.show._links.previousepisode">Previous episode: <app-single-episode [url]="show.show._links.previousepisode.href"></app-single-episode></p>
-        <p *ngIf="show.show._links.nextepisode">Next episode: <app-single-episode [url]="show.show._links.nextepisode.href"></app-single-episode></p>
+        <p *ngIf="show.prevEpUrl">Previous episode: <app-single-episode [url]="show.prevEpUrl"></app-single-episode></p>
+        <p *ngIf="show.nextEpUrl">Next episode: <app-single-episode [url]="show.nextEpUrl"></app-single-episode></p>
       </ng-template>
     </mat-panel-description>
   </mat-expansion-panel>

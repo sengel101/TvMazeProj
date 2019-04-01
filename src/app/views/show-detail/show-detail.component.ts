@@ -37,9 +37,3 @@ export class ShowDetailComponent implements OnInit {
 
 }
 
-
-// this.service.getShows(
-//   this.route.snapshot.paramMap.get('query')
-// ).subscribe(
-//   result => this.shows = result
-// );

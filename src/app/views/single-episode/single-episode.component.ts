@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ServiceService} from '../../models/service.service';
+import { HttpClient} from '@angular/common/http';
 
 // retrieves the episode for the previousepisode / nextepisode from the ShowDetailComponent View
 
@@ -19,7 +20,6 @@ export class SingleEpisodeComponent implements OnInit {
     ).subscribe(
       result => this.episode = result
     );
-
   }
 
 }

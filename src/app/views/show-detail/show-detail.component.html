@@ -9,7 +9,7 @@
 <mat-accordion>
   <mat-expansion-panel *ngFor="let show of shows" [ngStyle]="{'color':show.show.status === false ? 'red':'blue'}">
     <mat-expansion-panel-header>
-      <mat-panel-title>
+      <mat-panel-title *ngIf="show.show.name">
          {{show.show.name}}
       </mat-panel-title>
       <mat-panel-description>

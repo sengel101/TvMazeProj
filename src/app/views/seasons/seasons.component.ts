@@ -23,8 +23,5 @@ export class SeasonsComponent implements OnInit {
 
   }
 
-  goToEpisodes(show) {
-    this.router.navigate(['episodes', show.show.id]);
-  }
 }
 
